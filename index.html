@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Học tiếng Trung · Bài 16–20</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f6f4ff;--card:#fff;--ink:#3a3552;--mut:#8f8aab;--pri:#9b8cf0;--pri2:#d9d3fb;--mint:#cdf3e3;--peach:#ffe2c6;--sky:#cfe8fb;--pink:#fbd3e6;--line:#e6e1fa;--ok:#4ade80;--bad:#fb7185}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1a29;--card:#292639;--ink:#efecff;--mut:#aaa5c8;--line:#413d5a;--mint:#2f5a45;--peach:#6b4a2f;--sky:#2f4f66;--pink:#6b3a58;--pri2:#453a6b}}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh}
+header{background:linear-gradient(120deg,var(--pink),var(--pri2),var(--mint));padding:20px 16px 16px;text-align:center;color:#3a3552}
+header h1{margin:0;font-size:1.35rem}header p{margin:4px 0 0;font-size:.85rem}
+nav{display:flex;gap:6px;overflow-x:auto;padding:10px 12px;background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+nav button{flex:0 0 auto;border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:8px 13px;border-radius:999px;font-size:.85rem;cursor:pointer}
+nav button.on{background:var(--pri);color:#fff;border-color:var(--pri)}
+main{max-width:720px;margin:0 auto;padding:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 6px 18px rgba(155,140,240,.15)}
+.han{font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif}
+input.s{width:100%;padding:11px 14px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:1rem;margin-bottom:10px}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse}
+th{background:var(--pri2);color:#3a3552;padding:8px;font-size:.8rem;text-align:left}
+td{padding:8px;border-bottom:1px solid var(--line);vertical-align:middle}
+tr:nth-child(even) td{background:rgba(155,140,240,.07)}
+td.h{font-size:1.5rem;font-weight:600}td.p{color:var(--pri);font-weight:600}
+.sp{border:0;background:var(--peach);width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1rem}
+.btn{border:0;background:var(--pri);color:#fff;padding:10px 18px;border-radius:14px;font-size:.95rem;cursor:pointer}
+.btn.g{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.row{display:flex;gap:8px;justify-content:center;margin-top:14px;flex-wrap:wrap;align-items:center}
+.fc{perspective:900px;height:260px;cursor:pointer}
+.fi{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+.fc.f .fi{transform:rotateY(180deg)}
+.fs{position:absolute;inset:0;backface-visibility:hidden;border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px}
+.fs.a{background:linear-gradient(135deg,var(--card),var(--sky));border:2px solid var(--sky)}
+.fs.b{background:linear-gradient(135deg,var(--pink),var(--peach));color:#4a3320;transform:rotateY(180deg)}
+.big{font-size:3.6rem;font-weight:700}
+.stat{display:flex;justify-content:space-between;font-size:.85rem;color:var(--mut);margin-bottom:10px}
+.q{text-align:center;padding:14px 0}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.opt{padding:14px 8px;border-radius:16px;border:2px solid var(--line);background:var(--bg);color:var(--ink);font-size:1.05rem;cursor:pointer;min-height:56px}
+.opt.ok{background:var(--ok);color:#fff;border-color:var(--ok)}.opt.no{background:var(--bad);color:#fff;border-color:var(--bad)}
+.zone{min-height:64px;border:2px dashed var(--pri);border-radius:16px;padding:8px;display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.tk{padding:8px 14px;border-radius:12px;background:var(--mint);border:0;color:#24403a;font-size:1.4rem;cursor:pointer}
+.zone .tk{background:var(--pink);color:#4a2a3a}
+.msg{text-align:center;min-height:26px;font-weight:600;margin-top:8px}
+.ref{background:var(--peach);color:#4a3320;border-radius:14px;padding:10px;margin-top:8px;font-weight:500}
+.mut{color:var(--mut)}
+</style>
+</head>
+<body>
+<header><h1>学汉语 · Bài 16–20</h1><p>Từ vựng mới · bấm 🔊 để nghe đọc mẫu</p></header>
+<nav id="nav"></nav>
+<main id="v"></main>
+<script>
+const D=`左边|zuǒbian|bên trái
+右边|yòubian|bên phải
+旁边|pángbiān|bên cạnh
+对面|duìmiàn|đối diện
+前面|qiánmiàn|phía trước
+后面|hòumiàn|phía sau
+附近|fùjìn|gần đây, vùng lân cận
+中间|zhōngjiān|ở giữa
+往|wǎng|hướng về, về phía
+拐/转|guǎi/zhuǎn|rẽ, quẹo
+第一|dì-yī|thứ nhất, đầu tiên
+怎么走|zěnme zǒu|đi như thế nào
+订|dìng|đặt (trước)
+预约|yùyuē|hẹn trước, đặt lịch
+时间|shíjiān|thời gian
+入住|rùzhù|nhận phòng
+退房|tuìfáng|trả phòng
+票|piào|vé
+电影院|diànyǐngyuàn|rạp chiếu phim
+电影|diànyǐng|phim
+火车|huǒchē|tàu hỏa
+高铁|gāotiě|tàu cao tốc
+付款|fùkuǎn|thanh toán
+现金|xiànjīn|tiền mặt
+转账|zhuǎnzhàng|chuyển khoản
+扫码|sǎomǎ|quét mã
+餐厅|cāntīng|nhà ăn, nhà hàng
+水|shuǐ|nước
+杯子|bēizi|cái cốc, ly
+喝|hē|uống
+啤酒|píjiǔ|bia
+干杯|gānbēi|cạn ly
+好喝|hǎohē|ngon (đồ uống)
+服务员|fúwùyuán|nhân viên phục vụ
+茶|chá|trà
+奶茶|nǎichá|trà sữa
+卡|kǎ|thẻ
+信用卡|xìnyòngkǎ|thẻ tín dụng
+然后|ránhòu|sau đó, rồi
+点|diǎn|gọi (món), chọn
+水果|shuǐguǒ|hoa quả, trái cây
+文件|wénjiàn|tài liệu, văn bản
+资料|zīliào|tài liệu, dữ liệu
+桌子|zhuōzi|cái bàn
+椅子|yǐzi|cái ghế
+上|shàng|trên
+上面|shàngmiàn|phía trên, mặt trên
+上边|shàngbian|phía trên
+下|xià|dưới
+下面|xiàmiàn|phía dưới
+下边|xiàbian|phía dưới
+里面|lǐmiàn|bên trong
+外面|wàimiàn|bên ngoài
+打印|dǎyìn|in (tài liệu)
+打印机|dǎyìnjī|máy in
+咖啡|kāfēi|cà phê
+电脑|diànnǎo|máy tính
+笔|bǐ|bút
+纸|zhǐ|giấy
+用|yòng|dùng, sử dụng
+书|shū|sách
+本|běn|quyển (lượng từ của sách)
+书桌|shūzhuō|bàn học
+办公桌|bàngōngzhuō|bàn làm việc`.split('\n').map(l=>{const[h,p,v]=l.split('|');return{h,p,v}});
+
+/* ===== Câu: chỉ dùng từ vựng bài 16–20 và các bài đã học ===== */
+const R=(a=>()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296})(11);
+const sh0=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(R()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const X=(...a)=>a.reduce((r,l)=>r.flatMap(x=>l.map(y=>[...x,y])),[[]]);
+const N=['零','一','二','三','四','五','六','七','八','九','十'];
+const cap=s=>s[0].toUpperCase()+s.slice(1);
+const mk=(t,v)=>({t:t.replace('?','').split(' '),v,q:t.endsWith('?')});
+const Sb=[['我','tôi'],['你','bạn'],['他','anh ấy'],['她','cô ấy'],['我们','chúng tôi'],['他们','họ'],['老板','ông chủ'],['经理','giám đốc'],['秘书','thư ký'],['老师','giáo viên'],['职员','nhân viên'],['司机','tài xế']];
+const CP=[['银行','ngân hàng'],['超市','siêu thị'],['市场','chợ'],['学校','trường học'],['商店','cửa hàng'],['医院','bệnh viện'],['饭店','nhà hàng'],['酒店','khách sạn'],['宾馆','nhà khách'],['电影院','rạp phim'],['餐厅','nhà ăn'],['公司','công ty']];
+const REL=[['旁边','bên cạnh'],['对面','đối diện'],['左边','bên trái'],['右边','bên phải'],['前面','phía trước'],['后面','phía sau']];
+const PL3=[['银行','ngân hàng'],['超市','siêu thị'],['餐厅','nhà ăn'],['电影院','rạp phim'],['医院','bệnh viện'],['商店','cửa hàng'],['饭店','nhà hàng'],['市场','chợ'],['洗手间','nhà vệ sinh']];
+const MD=[['今天','hôm nay'],['明天','ngày mai'],['星期一','thứ hai'],['星期五','thứ sáu'],['星期六','thứ bảy']];
+const HT=[['酒店','khách sạn'],['宾馆','nhà khách']];
+const DK={咖啡:'cà phê',茶:'trà',奶茶:'trà sữa',水:'nước',啤酒:'bia'};
+const FDV={粉:'bún/phở',炒饭:'cơm rang',包子:'bánh bao',烤肉:'thịt nướng',火锅:'lẩu',面包:'bánh mì',水果:'hoa quả'};
+const PRV={早上:'buổi sáng',中午:'buổi trưa',下午:'buổi chiều',晚上:'buổi tối'};
+const F=[],add=(a,n)=>F.push(...sh0(a).slice(0,n));
+add(X(CP,CP,REL).filter(([a,b])=>a[0]!==b[0]).map(([a,b,r])=>mk(`${a[0]} 在 ${b[0]} 的 ${r[0]}`,`${cap(a[1])} ở ${r[1]} ${b[1]}`)),24);
+add(X([['公司','công ty'],['学校','trường học'],['酒店','khách sạn'],['宾馆','nhà khách'],['医院','bệnh viện'],['我 家','nhà tôi']],CP.slice(0,11)).filter(([p,q])=>p[0]!==q[0]).map(([p,q])=>mk(`${p[0]} 附近 有 ${q[0]}`,`Gần ${p[1]} có ${q[1]}`)),10);
+add(PL3.map(q=>mk(`请 问 附近 有 ${q[0]} 吗?`,`Xin hỏi, gần đây có ${q[1]} không?`)),6);
+add(PL3.map(q=>mk(`请 问 ${q[0]} 怎么走?`,`Xin hỏi, ${q[1]} đi như thế nào?`)),6);
+add(X(Sb,MD,[['房间','phòng'],['一 张 火车 票','một vé tàu hỏa'],['一 张 高铁 票','một vé tàu cao tốc'],['一 张 飞机 票','một vé máy bay'],['一 张 电影 票','một vé xem phim']]).map(([s,m,x])=>mk(`${s[0]} ${m[0]} 要 订 ${x[0]}`,`${cap(m[1])} ${s[1]} cần đặt ${x[1]}`)),10);
+add(X(Sb.slice(0,8),MD,HT).map(([s,m,h])=>mk(`${s[0]} ${m[0]} 下午 入住 ${h[0]}`,`${cap(m[1])} ${s[1]} nhận phòng ${h[1]} vào buổi chiều`)),5);
+add(X(Sb.slice(0,8),MD).map(([s,m])=>mk(`${s[0]} ${m[0]} 中午 退房`,`${cap(m[1])} ${s[1]} trả phòng vào buổi trưa`)),5);
+add(X(Sb.slice(0,8),[['明天','ngày mai'],['星期三','thứ tư'],['星期五','thứ sáu']],[['早上',9],['早上',10],['下午',3],['下午',4]],[['医生','bác sĩ'],['会议室','phòng họp']]).map(([s,m,[p,h],x])=>mk(`${s[0]} 要 预约 ${m[0]} ${p} ${N[h]} 点 的 ${x[0]}`,`${cap(s[1])} muốn hẹn ${x[1]} lúc ${h} giờ ${PRV[p].replace('buổi ','')} ${m[1]}`)),6);
+add(X([['你','bạn'],['老板','ông chủ'],['经理','giám đốc'],['老师','giáo viên']],[...MD,['下午','buổi chiều']]).map(([s,m])=>mk(`${s[0]} ${m[0]} 有 时间 吗?`,`${cap(m[1])} ${s[1]} có thời gian không?`)),3);
+add(X(Sb.filter(s=>!['你','老师'].includes(s[0])),[...MD,['下午','buổi chiều']]).map(([s,m])=>mk(`${s[0]} ${m[0]} 没有 时间`,`${cap(m[1])} ${s[1]} không có thời gian`)),3);
+add(X([['我','tôi'],['她','cô ấy'],['他','anh ấy'],['我们','chúng tôi']],[['今天','hôm nay'],['明天','ngày mai'],['星期五','thứ sáu'],['星期六','thứ bảy']],[['朋友','bạn'],['她','cô ấy'],['他','anh ấy']]).filter(([s,,c])=>s[0]!==c[0]).map(([s,m,c])=>mk(`${s[0]} ${m[0]} 晚上 跟 ${c[0]} 去 电影院 看 电影`,`${cap(m[1])} buổi tối ${s[1]} cùng ${c[1]} đi rạp xem phim`)),6);
+const PAY=[['现金','tiền mặt'],['信用卡','thẻ tín dụng'],['手机 扫码','điện thoại quét mã']];
+add(X(Sb.slice(0,10),PAY).map(([s,p])=>mk(`${s[0]} 用 ${p[0]} 付款`,`${cap(s[1])} thanh toán bằng ${p[1]}`)),8);
+add(PAY.map(p=>mk(`可以 用 ${p[0]} 付款 吗?`,`Có thể thanh toán bằng ${p[1]} không?`)),3);
+add(X(Sb,[['早上','咖啡'],['早上','茶'],['早上','奶茶'],['中午','水'],['中午','茶'],['下午','咖啡'],['下午','奶茶'],['下午','茶'],['晚上','啤酒'],['晚上','水'],['晚上','茶']]).map(([s,[t,d]])=>mk(`${s[0]} ${t} 喝 ${d}`,`${cap(PRV[t])} ${s[1]} uống ${DK[d]}`)),12);
+add(X(['茶','奶茶','咖啡','啤酒'],[['很 好喝','rất ngon'],['真 好喝','ngon thật'],['太 好喝 了','ngon quá'],['好喝 吗?','có ngon không?']]).map(([d,[f,v]])=>mk(`${d} ${f}`,`${cap(DK[d])} ${v}`)),8);
+add(Object.entries({粉:['水','茶'],炒饭:['水','茶'],包子:['茶','奶茶','水'],烤肉:['啤酒','水'],火锅:['啤酒','茶'],面包:['咖啡','奶茶','茶'],水果:['茶','水']}).flatMap(([f,ds])=>X(Sb.slice(0,6),ds).map(([s,d])=>mk(`${s[0]} 点 ${f} 和 ${d}`,`${cap(s[1])} gọi ${FDV[f]} và ${DK[d]}`))),6);
+add(Object.keys(DK).map(d=>mk(`服务员 我 要 ${d}`,`Phục vụ ơi, cho tôi ${DK[d]}`)),4);
+add(X([['电脑','máy tính'],['打印机','máy in'],['手机','điện thoại'],['笔','bút'],['纸','giấy'],['书','sách'],['文件','tài liệu'],['资料','tài liệu'],['杯子','cái cốc'],['名片','danh thiếp']],[['桌子','bàn'],['书桌','bàn học'],['办公桌','bàn làm việc']],[['上面'],['上边']]).map(([i,s,r])=>mk(`${i[0]} 在 ${s[0]} ${r[0]}`,`${cap(i[1])} ở trên ${s[1]}`)),16);
+add(X([['电脑','máy tính'],['手机','điện thoại'],['书','sách'],['笔','bút'],['护照','hộ chiếu'],['身份证','CCCD'],['文件','tài liệu'],['打印机','máy in'],['资料','tài liệu'],['名片','danh thiếp']],[['房间','phòng'],['办公室','văn phòng'],['会议室','phòng họp']]).map(([i,r])=>mk(`${i[0]} 在 ${r[0]} 里面`,`${cap(i[1])} ở trong ${r[1]}`)),10);
+add(X(Sb.filter(s=>!['你'].includes(s[0])),[['办公室','văn phòng'],['会议室','phòng họp'],['房间','phòng'],['仓库','kho'],['车间','xưởng'],['电影院','rạp phim'],['餐厅','nhà ăn']],[['里面','trong'],['外面','ngoài']]).map(([s,r,w])=>mk(`${s[0]} 在 ${r[0]} ${w[0]}`,`${cap(s[1])} ở ${w[1]} ${r[1]}`)),8);
+add(X(['我','你','他','她','我们','他们','秘书','职员','学生','老师'].map(x=>[x,{我:'tôi',你:'bạn',他:'anh ấy',她:'cô ấy',我们:'chúng tôi',他们:'họ',秘书:'thư ký',职员:'nhân viên',学生:'học sinh',老师:'giáo viên'}[x]]),[['电脑 工作','máy tính','làm việc'],['电脑 学习','máy tính','học'],['电脑 看 电影','máy tính','xem phim'],['手机 打 电话','điện thoại','gọi điện'],['打印机 打印 文件','máy in','in tài liệu'],['打印机 打印 资料','máy in','in tài liệu']]).map(([s,[t,tv,av]])=>{const [tool,...act]=t.split(' ');return mk(`${s[0]} 用 ${tool} ${act.join(' ')}`,`${cap(s[1])} dùng ${tv} để ${av}`)}),10);
+
+const HAND=`请 往 前面 走 然后 往 右边 拐|Xin đi thẳng rồi rẽ phải
+请 往 前面 走 然后 往 左边 转|Xin đi thẳng rồi rẽ trái
+银行 在 你 的 左边|Ngân hàng ở bên trái bạn
+超市 在 你 的 右边|Siêu thị ở bên phải bạn
+电梯 在 办公室 的 对面|Thang máy ở đối diện văn phòng
+楼梯 在 电梯 旁边|Cầu thang ở cạnh thang máy
+洗手间 在 会议室 的 后面|Nhà vệ sinh ở phía sau phòng họp
+办公室 在 第一 层|Văn phòng ở tầng một
+我 是 第一 个 到 公司 的 人|Tôi là người đầu tiên đến công ty
+第一 个 房间 是 我 的|Phòng đầu tiên là của tôi
+老板 的 办公室 在 中间|Văn phòng ông chủ ở giữa
+银行 在 学校 和 医院 中间|Ngân hàng ở giữa trường học và bệnh viện
+请 问 几 点 可以 入住?|Xin hỏi mấy giờ có thể nhận phòng?
+下午 三 点 可以 入住|3 giờ chiều có thể nhận phòng
+中午 十 二 点 退房|12 giờ trưa trả phòng
+我 要 退房|Tôi muốn trả phòng
+我 要 入住 请 看 一下 我 的 护照|Tôi muốn nhận phòng, xin xem hộ chiếu của tôi
+你 订 票 了 吗?|Bạn đã đặt vé chưa?
+我 订 了 一 张 火车 票|Tôi đã đặt một vé tàu hỏa
+火车 票 多少 钱?|Vé tàu hỏa bao nhiêu tiền?
+火车 票 五 十 元|Vé tàu hỏa 50 tệ
+高铁 很 快 火车 很 慢|Tàu cao tốc rất nhanh, tàu hỏa rất chậm
+高铁 的 票 很 贵|Vé tàu cao tốc rất đắt
+火车 的 票 很 便宜|Vé tàu hỏa rất rẻ
+你 坐 火车 还是 坐 高铁?|Bạn đi tàu hỏa hay tàu cao tốc?
+我 坐 火车 去 海防|Tôi đi tàu hỏa đến Hải Phòng
+电影 票 三 十 元|Vé xem phim 30 tệ
+这 个 电影 怎么样?|Bộ phim này thế nào?
+我 去 电影院 买 电影 票|Tôi đến rạp mua vé xem phim
+电影院 离 这里 很 近|Rạp chiếu phim cách đây rất gần
+请 扫码 付款|Xin quét mã thanh toán
+我 没有 现金|Tôi không có tiền mặt
+你 可以 转账 吗?|Bạn có thể chuyển khoản không?
+我 有 一 张 信用卡|Tôi có một thẻ tín dụng
+他 是 餐厅 的 服务员|Anh ấy là nhân viên phục vụ của nhà ăn
+服务员 在 餐厅 工作|Nhân viên phục vụ làm việc ở nhà ăn
+请 问 服务员 在 哪儿?|Xin hỏi nhân viên phục vụ ở đâu?
+我们 干杯 吧|Chúng ta cạn ly nhé
+老板 请 大家 喝 啤酒|Ông chủ mời mọi người uống bia
+大家 干杯|Mọi người cạn ly
+开 车 不 要 喝 啤酒|Lái xe đừng uống bia
+水果 很 好吃|Hoa quả rất ngon
+请 给 我 一 个 杯子|Xin cho tôi một cái cốc
+你 喝 什么?|Bạn uống gì?
+我 要 咖啡 你 要 什么?|Tôi muốn cà phê, bạn muốn gì?
+咖啡 和 茶 我 都 喝|Cà phê và trà tôi đều uống
+请 帮 我 打印 一下 文件|Xin giúp tôi in tài liệu
+打印机 在 哪儿?|Máy in ở đâu?
+我 有 一 本 书|Tôi có một quyển sách
+这 本 书 是 我 的|Quyển sách này là của tôi
+那 本 书 多少 钱?|Quyển sách kia bao nhiêu tiền?
+我 要 买 一 本 汉语 书|Tôi muốn mua một quyển sách tiếng Hán
+每 天 晚上 我 看 书|Mỗi tối tôi đọc sách
+请 给 我 笔 和 纸|Xin đưa tôi bút và giấy
+这 张 纸 是 谁 的?|Tờ giấy này của ai?
+老师 的 书桌 在 办公室 里面|Bàn học của giáo viên ở trong văn phòng
+外面 很 冷|Bên ngoài rất lạnh
+办公室 里面 很 热|Trong văn phòng rất nóng
+请 进 里面 坐|Mời vào trong ngồi
+请 在 外面 等 一下|Xin chờ bên ngoài một chút`.split('\n').map(l=>{const[a,v]=l.split('|');return mk(a,v)});
+const seen=new Set();
+const S=[...F,...HAND].filter(s=>{const k=s.t.join('');if(seen.has(k))return false;seen.add(k);return true});
+
+/* ===== Ứng dụng ===== */
+const $=s=>document.querySelector(s),shuf=a=>[...a].sort(()=>Math.random()-.5);
+function say(t){try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t.split('/')[0].replace(/[()]/g,''));u.lang='zh-CN';u.rate=.8;const v=speechSynthesis.getVoices().find(x=>x.lang.replace('_','-').startsWith('zh'));if(v)u.voice=v;speechSynthesis.speak(u)}catch(e){}}
+window.say=say;
+const T=[['list','📖 Danh sách'],['card','🃏 Flashcard'],['py','🎯 Hán → Pinyin'],['vi','🎯 Hán → Nghĩa'],['han','🎯 Nghĩa → Hán'],['sen','🧩 Ghép câu']];
+const nav=$('#nav');
+T.forEach(([k,n])=>{const b=document.createElement('button');b.textContent=n;b.dataset.k=k;b.onclick=()=>go(k);nav.appendChild(b)});
+function go(k){[...nav.children].forEach(b=>b.classList.toggle('on',b.dataset.k===k));({list,card,py:()=>quiz('py'),vi:()=>quiz('vi'),han:()=>quiz('han'),sen})[k]();window.scrollTo(0,0)}
+
+function list(){
+ $('#v').innerHTML=`<input class="s" id="q" placeholder="🔍 Tìm chữ Hán, pinyin hoặc nghĩa..."><div class="card tw"><table><thead><tr><th>#</th><th>Chữ Hán</th><th>Phiên âm</th><th>Nghĩa</th><th></th></tr></thead><tbody id="tb"></tbody></table></div>`;
+ const draw=f=>{$('#tb').innerHTML=D.map((w,i)=>({w,i})).filter(({w})=>!f||(w.h+w.p+w.v).toLowerCase().includes(f)).map(({w,i})=>`<tr><td class="mut">${i+1}</td><td class="h han">${w.h}</td><td class="p">${w.p}</td><td>${w.v}</td><td><button class="sp" onclick="say('${w.h}')">🔊</button></td></tr>`).join('')};
+ draw('');$('#q').oninput=e=>draw(e.target.value.trim().toLowerCase());
+}
+
+let deck=[],ci=0;
+function card(){if(!deck.length)deck=[...D];
+ const w=deck[ci],hs=w.h.split('/');
+ $('#v').innerHTML=`<div class="stat"><span>Thẻ ${ci+1}/${deck.length}</span><span>Bấm vào thẻ để lật</span></div>
+ <div class="fc" id="fc"><div class="fi"><div class="fs a"><div class="big han">${hs[0]}</div>${hs[1]?`<div class="han" style="font-size:1.4rem">/ ${hs[1]}</div>`:''}</div><div class="fs b"><div style="font-size:2rem;font-weight:700">${w.p}</div><div style="font-size:1.4rem;margin-top:8px">${w.v}</div></div></div></div>
+ <div class="row"><button class="btn g" id="pv">◀ Trước</button><button class="sp" id="sd" style="width:46px;height:46px">🔊</button><button class="btn g" id="nx">Sau ▶</button></div>
+ <div class="row"><button class="btn" id="sh">🔀 Xáo trộn</button><button class="btn g" id="rs">↺ Theo thứ tự</button></div>`;
+ $('#fc').onclick=()=>$('#fc').classList.toggle('f');
+ $('#sd').onclick=()=>say(w.h);
+ $('#pv').onclick=()=>{ci=(ci-1+deck.length)%deck.length;card()};
+ $('#nx').onclick=()=>{ci=(ci+1)%deck.length;card()};
+ $('#sh').onclick=()=>{deck=shuf(D);ci=0;card()};
+ $('#rs').onclick=()=>{deck=[...D];ci=0;card()};
+}
+
+const M={py:{t:'Chọn phiên âm đúng',q:w=>w.h,a:w=>w.p,big:1},vi:{t:'Chọn nghĩa đúng',q:w=>w.h,a:w=>w.v,big:1},han:{t:'Chọn chữ Hán đúng',q:w=>w.v,a:w=>w.h,han:1}};
+let sc={score:0,total:0,streak:0};
+function quiz(k){
+ const m=M[k],w=D[Math.floor(Math.random()*D.length)],ans=m.a(w);
+ let o=[ans];for(const x of shuf(D)){const t=m.a(x);if(!o.includes(t))o.push(t);if(o.length==4)break}
+ o=shuf(o);
+ $('#v').innerHTML=`<div class="card"><div class="stat"><span>${m.t}</span><span>✅ ${sc.score}/${sc.total} · 🔥 ${sc.streak}</span></div>
+ <div class="q"><div class="${m.big?'big han':''}" style="${m.big?'':'font-size:1.8rem;font-weight:700'}">${m.q(w)}</div>${m.big?`<button class="sp" style="margin-top:8px" onclick="say('${w.h}')">🔊</button>`:''}</div>
+ <div class="opts">${o.map(t=>`<button class="opt ${m.han?'han':''}" style="${m.han?'font-size:1.5rem':''}">${t}</button>`).join('')}</div>
+ <div class="msg" id="mg"></div><div class="row"><button class="btn" id="nx" style="display:none">Câu tiếp ▶</button></div></div>`;
+ document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{
+  const ok=b.textContent===ans;sc.total++;ok?(sc.score++,sc.streak++):sc.streak=0;
+  document.querySelectorAll('.opt').forEach(x=>{x.disabled=true;if(x.textContent===ans)x.classList.add('ok')});
+  if(!ok)b.classList.add('no');
+  $('#mg').innerHTML=ok?'🎉 Chính xác!':`❌ Đáp án: ${w.h} · ${w.p} · ${w.v}`;
+  say(w.h);$('#nx').style.display='';$('#nx').onclick=()=>quiz(k);
+ });
+}
+
+let si=0,order=[];
+function sen(){
+ if(!order.length)order=shuf(S.map((_,i)=>i));
+ const s=S[order[si%order.length]];let toks=shuf(s.t.map((t,i)=>({t,i})));
+ let ans=[];
+ $('#v').innerHTML=`<div class="card"><div class="stat"><span>Câu ${si%order.length+1}/${order.length}</span><span>Chỉ dùng từ vựng đã học</span></div>
+ <div class="q"><div class="mut" style="font-size:.9rem">Ghép thành câu đúng:</div><div style="font-size:1.3rem;font-weight:700;margin-top:6px">${s.v}</div></div>
+ <div class="zone" id="zn"></div><div class="row" id="pool" style="margin-top:0"></div>
+ <div class="msg" id="mg"></div>
+ <div class="row"><button class="btn g" id="rs">↺ Làm lại</button><button class="btn g" id="xt">🔀 Xáo từ</button><button class="btn" id="ck">Kiểm tra</button></div>
+ <div class="row"><button class="btn g" id="nx">Câu khác ▶</button></div></div>`;
+ const draw=()=>{
+  $('#zn').innerHTML=ans.map(a=>`<button class="tk han" data-i="${a.i}" data-w="1">${a.t}</button>`).join('');
+  $('#pool').innerHTML=toks.filter(x=>!ans.includes(x)).map(x=>`<button class="tk han" data-i="${x.i}">${x.t}</button>`).join('');
+  document.querySelectorAll('.tk').forEach(b=>b.onclick=()=>{const x=toks.find(t=>t.i==b.dataset.i);if(b.dataset.w)ans=ans.filter(a=>a!==x);else{ans.push(x);say(x.t)}draw()});
+ };draw();
+ const full=s.t.join('')+(s.q?'？':'。');
+ $('#rs').onclick=()=>{ans=[];draw();$('#mg').textContent=''};
+ $('#xt').onclick=()=>{toks=shuf(toks);draw()};
+ $('#ck').onclick=()=>{
+  const ok=ans.length===s.t.length&&ans.every((a,i)=>a.t===s.t[i]);
+  $('#mg').innerHTML=ok?`🎉 Chính xác!<br><span class="han" style="font-size:1.4rem">${full}</span>`:`❌ Chưa đúng<div class="ref">💡 Đáp án tham khảo:<br><span class="han" style="font-size:1.4rem">${s.t.join(' ')}${s.q?' ？':' 。'}</span></div>`;
+  say(s.t.join(''));
+ };
+ $('#nx').onclick=()=>{si++;sen()};
+}
+go('list');
+</script>
+</body>
+</html>
